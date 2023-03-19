@@ -1,5 +1,5 @@
 import './App.css';
-import ScamstopperTrial from './pages/ScamstopperTrial';
+import ScamstopperTrial from './pages/ScamstopperLandingPage';
 import Information from './pages/Information';
 import About from './pages/About';
 import Upload from './pages/Upload';

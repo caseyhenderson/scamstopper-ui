@@ -1,5 +1,4 @@
-import React from "react";
-import { Grid } from '@mui/material';
+import { Card, CardContent, CardHeader, Grid, Typography} from '@mui/material';
 import { useState } from "react"
 import storage from "../firebase"
 import {ref, uploadBytesResumable, getDownloadURL 
@@ -43,8 +42,20 @@ export default function Upload()
     <div className="Upload">
       <Grid>
         <ScamstopperWidget/>
-        <h1>Upload the text of your suspicious email or message to Scamstopper!</h1>
-      <form onSubmit={handleSubmit} className='form'>
+        <Card variant = "outlined">
+            <CardHeader
+                title= <Typography variant = "h2"> Get your message checked here! </Typography>
+                />
+                <CardContent>
+                    <Typography variant="body2" component="p">
+                    Click the button below to upload the text of your suspicious email or message to Scamstopper!
+                 </Typography>
+
+                </CardContent>
+        </Card>
+        <Card>
+          <CardContent>
+          <form onSubmit={handleSubmit} className='form'>
         <input type='file' />
         <button type='submit'>Upload to Scamstopper</button>
       </form>
@@ -58,6 +69,9 @@ export default function Upload()
         fileUrl &&
         <img src={fileUrl} alt='uploaded file' height={200} />
       }
+          </CardContent>
+        </Card>
+
       </Grid>
 
     </div>
