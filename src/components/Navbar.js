@@ -41,8 +41,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-          <Link to="/upload">
-                <p> Upload </p>
+          <Link to="/textAnalysis">
+                <p> Text Analysis </p>
             </Link>
           </li>
         </ul>

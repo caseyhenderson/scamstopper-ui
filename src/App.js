@@ -2,7 +2,7 @@ import './App.css';
 import ScamstopperTrial from './pages/ScamstopperLandingPage';
 import Information from './pages/Information';
 import About from './pages/About';
-import Upload from './pages/Upload';
+import TextAnalysis from './pages/TextAnalysis';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 
@@ -16,7 +16,7 @@ function App() {
               <Route exact path="/" element={<ScamstopperTrial/>} />
               <Route path="/usefulInfo" element={<Information/>} />
               <Route path="/about" element={<About/>} />
-              <Route path="/upload" element={<Upload/>} />
+              <Route path="/textAnalysis" element={<TextAnalysis/>} />
             </Routes>
           </div>
       </BrowserRouter>
