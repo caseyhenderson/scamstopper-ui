@@ -42,9 +42,15 @@ export default function Navbar() {
           </li>
           <li>
           <Link to="/textAnalysis">
-                <p> Text Analysis </p>
+                <p> Email Checker </p>
             </Link>
           </li>
+          <li>
+          <Link to="/feedback">
+                <p> Feedback </p>
+            </Link>
+          </li>
+
         </ul>
       </div>
     </nav>

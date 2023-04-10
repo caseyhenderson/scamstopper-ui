@@ -10,7 +10,7 @@ import { getStorage } from "firebase/storage";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 // add secrets later
-
+// put these in env as well, just in case
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "river-cocoa-377215.firebaseapp.com",

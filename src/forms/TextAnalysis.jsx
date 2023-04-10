@@ -33,7 +33,7 @@ const TextAnalysis = () => {
     console.log(prediction);
   };
   // get isSubmitting and pretty Formik working soon
-
+  // if we want to keep confidence, make it human readable (i.e. i'm x percent sure this is a scam)
   return (
     <div>
       <h1>Email Analysis</h1>

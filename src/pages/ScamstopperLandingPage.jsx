@@ -1,6 +1,5 @@
 import React from "react";
 import { Avatar, Card, CardContent, CardHeader, Grid, Typography } from '@mui/material';
-import FancyCard from "../components/FancyCard";
 import ScamstopperWidget from "../components/ScamstopperWidget";
 
 // make own card component for pretty cards
@@ -56,10 +55,7 @@ export default function ScamstopperLandingPage()
 
                 </CardContent>
         </Card>
-        
-        <Card variant = "outlined">
-                <FancyCard/>
-        </Card>
+    
     </Grid>
     <ScamstopperWidget/>
     </div>
