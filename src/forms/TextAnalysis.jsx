@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import TextareaAutosize from '@mui/base/TextareaAutosize';
+import {Grid, Typography }from '@mui/material';
 import ScamstopperWidget from "../components/ScamstopperWidget";
 
 
@@ -32,24 +34,34 @@ const TextAnalysis = () => {
     }
     console.log(prediction);
   };
-  // get isSubmitting and pretty Formik working soon
   // if we want to keep confidence, make it human readable (i.e. i'm x percent sure this is a scam)
   return (
     <div>
-      <h1>Email Analysis</h1>
-      <p>Please copy-and-paste the text of the email or message you're worried about here.</p>
-      <Formik initialValues={{ text: '' }} onSubmit={handleSubmit}>
-        {({ handleChange }) => (
-          <Form>
-            <label htmlFor="text">Analysis</label>
-            <Field type="text" id="text" name="text" onChange={handleChange} />
-            <ErrorMessage name="text" />
-            <button type="submit">Get Prediction</button>
+      <Grid container spacing={3} justifyContent="center" alignItems="center">
+        <Grid item xs={12}>
+          <Typography variant="h2">
+            Email Analysis
+          </Typography>
+          <Typography variant="subtitle1" component="p">
+            Please copy-and-paste the text of the email or message you're worried about here.
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+            <Formik initialValues={{ text: '' }} onSubmit={handleSubmit}>
+                {({ handleChange }) => (
+            <Form>
+                <Field name="text" as={TextareaAutosize} type="text" id="text" onChange={handleChange} />
+                <ErrorMessage name="text" />
+                <button type="submit">Get Prediction</button>
           </Form>
-        )}
-      </Formik>
-      <p>Prediction: {prediction.message} </p>
-      <p>Confidence: {prediction.confidence}</p>
+           )}
+          </Formik>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="body1">Prediction: {prediction.message} </Typography>
+            <Typography variant="body1">Confidence: {prediction.confidence}</Typography> 
+          </Grid>
+      </Grid>
       <ScamstopperWidget/>
     </div>
   );
