@@ -13,7 +13,7 @@ export default function Feedback()
                 title= <Typography variant = "h2"> Want to tell us how we can improve? Click the link below.</Typography>
                 />
                 <CardContent>
-                <Link href="https://forms.gle/q1v7N7Fs5M5qE6Bu7" target="_blank" rel="noreferrer" underline="hover">
+                <Link href="https://shusls.eu.qualtrics.com/jfe/form/SV_25JQkC6rsfLnQHQ" target="_blank" rel="noreferrer" underline="hover">
                         {'Give your feedback here!'}
                 </Link>
 
