@@ -81,7 +81,8 @@ app.post("/predict", async (req, res) => {
   }
   console.log("SCAM INDICATION CONFIDENCE: " + confidenceScam +
   "NOT_SCAM CONFIDENCE: "+confidenceNotScam);
-
+  confidenceScam = (confidenceScam*100).toFixed(2);
+  confidenceNotScam = (confidenceNotScam*100).toFixed(2);
   if (req.method === "OPTIONS") {
     // Send response to OPTIONS requests
     res.set("Access-Control-Allow-Methods", "GET");

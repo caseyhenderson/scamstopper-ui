@@ -39,7 +39,7 @@ const TextAnalysis = () => {
     <div>
       <Grid container spacing={3} justifyContent="center" alignItems="center">
         <Grid item xs={12}>
-          <Typography variant="h2">
+          <Typography variant="h2" data-test-id="email-analysis-title">
             Email Analysis
           </Typography>
           <Typography variant="subtitle1" component="p">
@@ -50,16 +50,16 @@ const TextAnalysis = () => {
             <Formik initialValues={{ text: '' }} onSubmit={handleSubmit}>
                 {({ handleChange }) => (
             <Form>
-                <Field name="text" as={TextareaAutosize} type="text" id="text" onChange={handleChange} />
+                <Field name="text" as={TextareaAutosize} type="text" id="text" onChange={handleChange} data-test-id="email-analysis-form"/>
                 <ErrorMessage name="text" />
-                <button type="submit">Get Prediction</button>
+                <button type="submit" data-test-id="get-prediction">Get Prediction</button>
           </Form>
            )}
           </Formik>
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="body1">Prediction: {prediction.message} </Typography>
-            <Typography variant="body1">Confidence: {prediction.confidence}</Typography> 
+            <Typography variant="body1" data-test-id="prediction-result">Prediction: {prediction.message} </Typography>
+            <Typography variant="body1" data-test-id="confidence-result">Confidence: {prediction.confidence} % </Typography> 
           </Grid>
       </Grid>
       <ScamstopperWidget/>
