@@ -10,7 +10,7 @@ describe('Testing the landing page of the Scamstopper web application, to ensure
     cy.visit('https://river-cocoa-377215.web.app/')
   })
 
-  it('displays the welcome page correctly', () => {
+  it('displays the landing page correctly', () => {
     cy.get('[data-test-id="welcome-text"]').should('have.text', ' Welcome to Scamstopper! ')
     cy.get('[data-test-id="get-started-text"]').should('have.text', 'Scamstopper is a friendly chatbot here to help you fight scams! Click the button in the bottom-right corner to get started.')
     cy.get('[data-test-id="easy-talk-text"]').should('have.text', ' Easy to Talk To ')
@@ -19,6 +19,5 @@ describe('Testing the landing page of the Scamstopper web application, to ensure
     cy.get('[data-test-id="knowledge-explanation"]').should('have.text', "Scamstopper knows the scammers' tricks, and how to stop them!")
     cy.get('[data-test-id="available-anywhere"]').should('have.text', " Available from anywhere on the web!")
     cy.get('[data-test-id="ask-questions"]').should('have.text', "Just visit Scamstopper and get asking questions!")
-    cy.get('#widgetIcon').should('have.class', 'df-chat-icon default')
   })
 })

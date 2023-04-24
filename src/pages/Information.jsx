@@ -10,10 +10,10 @@ export default function Information()
       <Grid>
         <Card>
           <CardHeader 
-            title= <Typography variant = "h4"> What would you like to know? </Typography>
+            title= <Typography variant = "h4" data-test-id="information-title"> What would you like to know? </Typography>
           />
           <CardContent>
-              <Typography variant="body2" component="p">
+              <Typography variant="body2" component="p" data-test-id="information-para">
                     Ask Scamstopper - just type into the chat box to your right!
                  </Typography>
           </CardContent>

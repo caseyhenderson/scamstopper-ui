@@ -10,10 +10,10 @@ export default function Feedback()
             <ScamstopperWidget/>
             <Card variant = "outlined">
             <CardHeader
-                title= <Typography variant = "h2"> Want to tell us how we can improve? Click the link below.</Typography>
+                title= <Typography variant = "h2" data-test-id="feedback-title"> Want to tell us how we can improve? Click the link below.</Typography>
                 />
                 <CardContent>
-                <Link href="https://shusls.eu.qualtrics.com/jfe/form/SV_25JQkC6rsfLnQHQ" target="_blank" rel="noreferrer" underline="hover">
+                <Link data-test-id="feedback-link" href="https://shusls.eu.qualtrics.com/jfe/form/SV_25JQkC6rsfLnQHQ" target="_blank" rel="noreferrer" underline="hover">
                         {'Give your feedback here!'}
                 </Link>
 
